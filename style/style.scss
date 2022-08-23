@@ -1,0 +1,124 @@
+@import 'variable.scss';
+//globals
+html, body{
+    max-width: 100vw;
+    height: 100vh;
+    background-color: $light_black;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $white;
+}
+.banner{
+    .top_header{
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        //min-width: 100vh;
+        background-color: $black;
+        z-index: 100;
+        .left-content{
+            background-color: $pink;
+            width: 20rem;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            height: 100%;
+            img{
+                width: 15%;
+                height: 70%;
+                margin-left: 15px;
+            }
+            .agency-name-logo{
+                margin-left: 15px;
+                .talent{
+                    font-family: $secondaryfont;
+                    font-weight: bolder;
+                    font-size: 1.5rem;
+                }
+                .agency{
+                    font-family: $primaryfont;
+                    font-size: 13px;
+                    letter-spacing: 10px;
+                }
+                span{
+                    display: block;
+                    text-transform: uppercase;
+                    color:$white;
+                }
+            }
+        }
+        ul.right-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            li{
+                height: 100%;
+                a:hover{
+                    background-color: $pink;
+                    transition: all ease-in-out .5s;
+                }
+                overflow: hidden;
+                a{
+                    display: block;
+                    font-family: $primaryfont;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $white;
+                    padding: 20px 10px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .layout{
+        position: relative;
+        height: 93vh;
+        margin: 0 auto auto 70px;
+        z-index: 50;
+        img {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            right: 0;
+            bottom: 0;
+        }
+        .layout-element{
+            position: absolute;
+            font-family: $primaryfont;
+            top: 30%;
+            .intro{
+                text-transform: uppercase;
+                color: $white;
+                font-size: 4rem;
+            }
+            article{
+                color: $gray_dark;
+                width: 50%;
+            }
+            a.btn{
+                display: block;
+                font-weight: bold;
+                margin: 5rem 0;
+                padding: 15px;
+                border: solid 2px $white;
+                border-radius: 2rem;
+                width: 5rem;
+                &:hover{
+                    background-color: $gray_dark;
+                    transition: ease-in-out .2s all;
+                    border: solid 2px $pink;
+                }
+            }
+        }
+    }
+}
